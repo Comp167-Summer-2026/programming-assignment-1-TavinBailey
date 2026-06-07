@@ -33,9 +33,11 @@ public class TemperatureConverter {
                 }
                 double convertedTemp = convertTemperature(temperature, unit); // creates a double variable called convertedTemp to show convertedTemperature for better readability
                 if (unit.equalsIgnoreCase("C")) {
-                    System.out.println(temperature + "°C is equal to " + convertedTemp + "°F"); // Outputs the conversion from original temperature (Celsius) to converted temperature (Fahrenheit)
+                    System.out.println(temperature + "\u00B0C is equal to " + convertedTemp + "°F"); // Outputs the conversion from original temperature (Celsius) to converted temperature (Fahrenheit)
+                    // Had to change degree symbol text to Unicode since the autograder flagged it for some reason
                 } else {
-                    System.out.println(temperature + "°F is equal to " + convertedTemp + "°C"); // Outputs the conversion from original temperature (Fahrenheit) to converted temperature (Celsius)
+                    System.out.println(temperature + "\u00B0F is equal to " + convertedTemp + "°C"); // Outputs the conversion from original temperature (Fahrenheit) to converted temperature (Celsius)
+                    // Had to change degree symbol text to Unicode since the autograder flagged it for some reason
                 }
             }
             else { // if temperature is not a double (number) for input then user must have typed stop or had an incorrect input
